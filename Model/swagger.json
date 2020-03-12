@@ -1,0 +1,1136 @@
+  
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "paytm Application API",
+    "description": "cool swagger API use by Amit",
+    "license": {
+      "name": "MIT",
+      "url": "https://opensource.org/licenses/MIT"
+    }
+  },
+  "host": "localhost:8000",
+  "basePath": "/",
+  "tags": [
+    {
+      "name": "Users",
+      "description": "API for users in the system"
+    }
+  ],
+  "schemes": [
+    "http"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/userSignup": {
+      "post": {
+        "tags": [
+          "Users"
+        ],
+        "description": "Create new user in system",
+        "parameters": [
+          {
+            "name": "user",
+            "in": "body",
+            "description": "User that we want to create",
+            "schema": {
+              "$ref": "#/definitions/user"
+            }
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+        }
+      }
+    },
+    "/userLogin": {
+      "post": {
+        "tags": [
+          "Users"
+        ],
+        "description": "login...",
+        "parameters": [
+          {
+            "name": "user deatils",
+            "in": "body",
+            "description": "User that we want to login",
+            "schema": {
+              "$ref": "#/definitions/user"
+            }
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+        }
+      }
+    },
+    "/adminSignup": {
+      "post": {
+        "tags": [
+          "Admin"
+        ],
+        "description": "Create new admin in system",
+        "parameters": [
+          {
+            "name": "admin",
+            "in": "body",
+            "description": "admin that we want to create",
+            "schema": {
+              "$ref": "#/definitions/admin"
+            }
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+        }
+      }
+  },
+  "/adminLogin": {
+      "post": {
+        "tags": [
+          "Admin"
+        ],
+        "description": "login...",
+        "parameters": [
+          {
+            "name": "user",
+            "in": "body",
+            "description": "User that we want to login",
+            "schema": {
+              "$ref": "#/definitions/admin"
+            }
+          }
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+        }
+      }
+    },
+  
+      "/addMovie": {
+        "post": {
+          "tags": [
+            "Admin(movie)"
+          ],
+          "description": "add new product in Menu",
+          "parameters": [
+            {
+              "name": "Authorization",
+              "in": "header",
+              "required":true,
+              "description": "token verification"
+            },
+            {
+                "name":"moviedetails",
+                "in":"body",
+                "schema":{
+                    "$ref":"#/definitions/movie"
+                }
+            }
+            
+          ],
+          "produces": [
+            "application/json"
+          ],
+          "responses": {
+          }
+        }
+      },
+      "/addMoviesCity": {
+        "post": {
+          "tags": [
+            "Admin(movie)"
+          ],
+          "description": "add new movie City",
+          "parameters": [
+            {
+              "name": "Authorization",
+              "in": "header",
+              "required":true,
+              "description": "token verification"
+            },
+            {
+                "name":"city details",
+                "in":"body",
+                "schema":{
+                    "$ref":"#/definitions/movieCity"
+                }
+            }
+            
+          ],
+          "produces": [
+            "application/json"
+          ],
+          "responses": {
+          }
+        }
+      },
+      "/addTheater": {
+        "post": {
+          "tags": [
+            "Admin(movie)"
+          ],
+          "description": "add new theater",
+          "parameters": [
+            {
+              "name": "Authorization",
+              "in": "header",
+              "required":true,
+              "description": "token verification"
+            },
+            {
+                "name":"theater details",
+                "in":"body",
+                "schema":{
+                    "$ref":"#/definitions/theater"
+                }
+            }
+            
+          ],
+          "produces": [
+            "application/json"
+          ],
+          "responses": {
+          }
+        }
+      },
+      "/addTheaterSeat": {
+        "post": {
+          "tags": [
+            "Admin(movie)"
+          ],
+          "description": "add new product in Menu",
+          "parameters": [
+            {
+              "name": "Authorization",
+              "in": "header",
+              "required":true,
+              "description": "token verification"
+            },
+            {
+                "name":"moviedetails",
+                "in":"body",
+                "schema":{
+                    "$ref":"#/definitions/movie"
+                }
+            }
+            
+          ],
+          "produces": [
+            "application/json"
+          ],
+          "responses": {
+          }
+        }
+      },
+      "/addFlight": {
+        "post": {
+          "tags": [
+            "Admin(flight)"
+          ],
+          "description": "add new flight",
+          "parameters": [
+            {
+              "name": "Authorization",
+              "in": "header",
+              "required":true,
+              "description": "token verification"
+            },
+            {
+                "name":"flight details",
+                "in":"body",
+                "schema":{
+                    "$ref":"#/definitions/movie"
+                }
+            }
+            
+          ],
+          "produces": [
+            "application/json"
+          ],
+          "responses": {
+          }
+        }
+      },
+      "/addSim": {
+        "post": {
+          "tags": [
+            "Admin(recharge)"
+          ],
+          "description": "add new sim",
+          "parameters": [
+            {
+              "name": "Authorization",
+              "in": "header",
+              "required":true,
+              "description": "token verification"
+            },
+            {
+                "name":"sim details",
+                "in":"body",
+                "schema":{
+                    "$ref":"#/definitions/movie"
+                }
+            }
+            
+          ],
+          "produces": [
+            "application/json"
+          ],
+          "responses": {
+          }
+        }
+      },
+      "/addPlan": {
+        "post": {
+          "tags": [
+            "Admin(recharge)"
+          ],
+          "description": "add new plan",
+          "parameters": [
+            {
+              "name": "Authorization",
+              "in": "header",
+              "required":true,
+              "description": "token verification"
+            },
+            {
+                "name":"plan details",
+                "in":"body",
+                "schema":{
+                    "$ref":"#/definitions/movie"
+                }
+            }
+            
+          ],
+          "produces": [
+            "application/json"
+          ],
+          "responses": {
+          }
+        }
+      },
+      "/addTrain": {
+        "post": {
+          "tags": [
+            "Admin(train)"
+          ],
+          "description": "add new train",
+          "parameters": [
+            {
+              "name": "Authorization",
+              "in": "header",
+              "required":true,
+              "description": "token verification"
+            },
+            {
+                "name":"train details",
+                "in":"body",
+                "schema":{
+                    "$ref":"#/definitions/movie"
+                }
+            }
+            
+          ],
+          "produces": [
+            "application/json"
+          ],
+          "responses": {
+          }
+        }
+      },
+
+      "/addTrainClass": {
+        "post": {
+          "tags": [
+            "Admin(train)"
+          ],
+          "description": "add class",
+          "parameters": [
+            {
+              "name": "Authorization",
+              "in": "header",
+              "required":true,
+              "description": "token verification"
+            },
+            {
+                "name":"class details",
+                "in":"body",
+                "schema":{
+                    "$ref":"#/definitions/movie"
+                }
+            }
+            
+          ],
+          "produces": [
+            "application/json"
+          ],
+          "responses": {
+          }
+        }
+      },
+
+      "/addFlightClass": {
+        "post": {
+          "tags": [
+            "Admin(flight)"
+          ],
+          "description": "add class",
+          "parameters": [
+            {
+              "name": "Authorization",
+              "in": "header",
+              "required":true,
+              "description": "token verification"
+            },
+            {
+                "name":"class details",
+                "in":"body",
+                "schema":{
+                    "$ref":"#/definitions/movie"
+                }
+            }
+            
+          ],
+          "produces": [
+            "application/json"
+          ],
+          "responses": {
+          }
+        }
+      },
+      "/addState": {
+        "post": {
+          "tags": [
+            "Admin(electricity)"
+          ],
+          "description": "add new State",
+          "parameters": [
+            {
+              "name": "Authorization",
+              "in": "header",
+              "required":true,
+              "description": "token verification"
+            },
+            {
+                "name":"state details",
+                "in":"body",
+                "schema":{
+                    "$ref":"#/definitions/movie"
+                }
+            }
+            
+          ],
+          "produces": [
+            "application/json"
+          ],
+          "responses": {
+          }
+        }
+      },
+      "/addBoard": {
+        "post": {
+          "tags": [
+            "Admin(electricity)"
+          ],
+          "description": "add board",
+          "parameters": [
+            {
+              "name": "Authorization",
+              "in": "header",
+              "required":true,
+              "description": "token verification"
+            },
+            {
+                "name":"Board details",
+                "in":"body",
+                "schema":{
+                    "$ref":"#/definitions/movie"
+                }
+            }
+            
+          ],
+          "produces": [
+            "application/json"
+          ],
+          "responses": {
+          }
+        }
+      },
+      "/addCity": {
+        "post": {
+          "tags": [
+            "Admin(electricity)"
+          ],
+          "description": "add new city",
+          "parameters": [
+            {
+              "name": "Authorization",
+              "in": "header",
+              "required":true,
+              "description": "token verification"
+            },
+            {
+                "name":"city details",
+                "in":"body",
+                "schema":{
+                    "$ref":"#/definitions/movie"
+                }
+            }
+            
+          ],
+          "produces": [
+            "application/json"
+          ],
+          "responses": {
+          }
+        }
+      },
+      "/addAppartment": {
+        "post": {
+          "tags": [
+            "Admin(electricity)"
+          ],
+          "description": "add new appartment",
+          "parameters": [
+            {
+              "name": "Authorization",
+              "in": "header",
+              "required":true,
+              "description": "token verification"
+            },
+            {
+                "name":"apartment details",
+                "in":"body",
+                "schema":{
+                    "$ref":"#/definitions/movie"
+                }
+            }
+            
+          ],
+          "produces": [
+            "application/json"
+          ],
+          "responses": {
+          }
+        }
+      },
+      "/viewMovies": {
+        "get": {
+          "tags": [
+            "Users"
+          ],
+          "description": "view",
+          "parameters": [
+            {
+              "name": "Authorization",
+              "in": "header",
+              "required":true,
+              "description": "token verification"
+            },
+            {
+              "name": "city Id",
+              "in": "query",
+              "description": "show movies list..",
+              "type":"string"
+            } 
+          ],
+          "produces": [
+            "application/json"
+          ],
+          "responses": {
+          }
+        }
+      },
+      "/viewTheaters": {
+        "get": {
+          "tags": [
+            "Users"
+          ],
+          "description": "view",
+          "parameters": [
+            {
+              "name": "Authorization",
+              "in": "header",
+              "required":true,
+              "description": "token verification"
+            },
+            {
+              "name": "city Id",
+              "in": "query",
+              "description": "show theater list..",
+              "type":"string"
+            },
+            {
+              "name": "movie Id",
+              "in": "query",
+              "description": "show theater list..",
+              "type":"string"
+            }  
+          ],
+          "produces": [
+            "application/json"
+          ],
+          "responses": {
+          }
+        }
+      },
+      "/viewTheaterSeats": {
+        "get": {
+          "tags": [
+            "Users"
+          ],
+          "description": "view",
+          "parameters": [
+            {
+              "name": "Authorization",
+              "in": "header",
+              "required":true,
+              "description": "token verification"
+            },
+            {
+              "name": "theater Id",
+              "in": "query",
+              "description": "show seat list..",
+              "type":"string"
+            }
+          ],
+          "produces": [
+            "application/json"
+          ],
+          "responses": {
+          }
+        }
+      },
+      "/movieTicketBooking": {
+        "post": {
+          "tags": [
+            "Users"
+          ],
+          "description": "Booking",
+          "parameters": [
+            {
+              "name": "Authorization",
+              "in": "header",
+              "required":true,
+              "description": "token verification"
+            },
+            {
+                "name":"booking Details",
+                "in":"body",
+                "schema":{
+                    "$ref":"#/definitions/movieTicket"
+                }
+            }
+            
+          ],
+          "produces": [
+            "application/json"
+          ],
+          "responses": {
+          }
+        }
+      },
+      "/viewFlights": {
+        "get": {
+          "tags": [
+            "Users"
+          ],
+          "description": "view",
+          "parameters": [
+            {
+              "name": "Authorization",
+              "in": "header",
+              "required":true,
+              "description": "token verification"
+            },
+            {
+              "name": "flights",
+              "in": "query",
+              "description": "show flight list..",
+              "type":"string"
+            }
+          ],
+          "produces": [
+            "application/json"
+          ],
+          "responses": {
+          }
+        }
+      },
+      "/flightTicketBooking": {
+        "post": {
+          "tags": [
+            "Users"
+          ],
+          "description": "Booking",
+          "parameters": [
+            {
+              "name": "Authorization",
+              "in": "header",
+              "required":true,
+              "description": "token verification"
+            },
+            {
+                "name":"booking Details",
+                "in":"body",
+                "schema":{
+                    "$ref":"#/definitions/movieTicket"
+                }
+            }
+            
+          ],
+          "produces": [
+            "application/json"
+          ],
+          "responses": {
+          }
+        }
+      },
+      "/viewTrains": {
+        "get": {
+          "tags": [
+            "Users"
+          ],
+          "description": "view",
+          "parameters": [
+            {
+              "name": "Authorization",
+              "in": "header",
+              "required":true,
+              "description": "token verification"
+            },
+            {
+              "name": "trains",
+              "in": "query",
+              "description": "show train list..",
+              "type":"string"
+            }
+          ],
+          "produces": [
+            "application/json"
+          ],
+          "responses": {
+          }
+        }
+      },
+      "/trainTicketBooking": {
+        "post": {
+          "tags": [
+            "Users"
+          ],
+          "description": "Booking",
+          "parameters": [
+            {
+              "name": "Authorization",
+              "in": "header",
+              "required":true,
+              "description": "token verification"
+            },
+            {
+                "name":"booking Details",
+                "in":"body",
+                "schema":{
+                    "$ref":"#/definitions/movieTicket"
+                }
+            }
+            
+          ],
+          "produces": [
+            "application/json"
+          ],
+          "responses": {
+          }
+        }
+      },
+      "/viewMovieTicketStatus": {
+        "get": {
+          "tags": [
+            "Users"
+          ],
+          "description": "view",
+          "parameters": [
+            {
+              "name": "Authorization",
+              "in": "header",
+              "required":true,
+              "description": "token verification"
+            },
+            {
+              "name": "bookingId",
+              "in": "query",
+              "description": "show booking status",
+              "type":"string"
+            } 
+          ],
+          "produces": [
+            "application/json"
+          ],
+          "responses": {
+          }
+        }
+      },
+      "/viewFlightTicketgStatus": {
+        "get": {
+          "tags": [
+            "Users"
+          ],
+          "description": "view",
+          "parameters": [
+            {
+              "name": "Authorization",
+              "in": "header",
+              "required":true,
+              "description": "token verification"
+            },
+            {
+              "name": "bookingId",
+              "in": "query",
+              "description": "show booking status",
+              "type":"string"
+            } 
+          ],
+          "produces": [
+            "application/json"
+          ],
+          "responses": {
+          }
+        }
+      },
+      "/viewtrainTicketgStatus": {
+        "get": {
+          "tags": [
+            "Users"
+          ],
+          "description": "view",
+          "parameters": [
+            {
+              "name": "Authorization",
+              "in": "header",
+              "required":true,
+              "description": "token verification"
+            },
+            {
+              "name": "PNR",
+              "in": "query",
+              "description": "show booking status",
+              "type":"string"
+            } 
+          ],
+          "produces": [
+            "application/json"
+          ],
+          "responses": {
+          }
+        }
+      },
+      "/viewAllSim": {
+        "get": {
+          "tags": [
+            "Users"
+          ],
+          "description": "view",
+          "parameters": [
+            {
+              "name": "Authorization",
+              "in": "header",
+              "required":true,
+              "description": "token verification"
+            },
+            {
+              "name": "sim detail",
+              "in": "query",
+              "description": "show sim list..",
+              "type":"string"
+            }
+          ],
+          "produces": [
+            "application/json"
+          ],
+          "responses": {
+          }
+        }
+      },
+      "/viewPlan": {
+        "get": {
+          "tags": [
+            "Users"
+          ],
+          "description": "view",
+          "parameters": [
+            {
+              "name": "Authorization",
+              "in": "header",
+              "required":true,
+              "description": "token verification"
+            },
+            {
+              "name": "sim Id",
+              "in": "query",
+              "description": "show all plan",
+              "type":"string"
+            }
+          ],
+          "produces": [
+            "application/json"
+          ],
+          "responses": {
+          }
+        }
+      },
+      "/mobileRecharge": {
+        "post": {
+          "tags": [
+            "Users"
+          ],
+          "description": "recharge",
+          "parameters": [
+            {
+              "name": "Authorization",
+              "in": "header",
+              "required":true,
+              "description": "token verification"
+            },
+            {
+                "name":"recharge Details",
+                "in":"body",
+                "schema":{
+                    "$ref":"#/definitions/movieTicket"
+                }
+            }
+            
+          ],
+          "produces": [
+            "application/json"
+          ],
+          "responses": {
+          }
+        }
+      },
+
+      "/payElectricityBill": {
+        "post": {
+          "tags": [
+            "Users"
+          ],
+          "description": "electricity",
+          "parameters": [
+            {
+              "name": "Authorization",
+              "in": "header",
+              "required":true,
+              "description": "token verification"
+            },
+            {
+                "name":"electricity Details",
+                "in":"body",
+                "schema":{
+                    "$ref":"#/definitions/movieTicket"
+                }
+            }
+            
+          ],
+          "produces": [
+            "application/json"
+          ],
+          "responses": {
+          }
+        }
+      }
+      
+    },
+    
+  "definitions": {
+    "user": {
+      "required": [
+        "phoneNumber",
+        "password"
+      ],
+      "properties": {
+          "phoneNumber":{
+              "type":"string"
+          },
+        
+        "password":{
+            "type":"string",
+            "minlength":"6",
+            "maxlength":"12"
+        },
+        "status":{
+            "type":"string",
+            "enum":["active","inactive","delete","block","unblock"]
+        }
+        
+      }
+    },
+    "admin": {
+      "required": [
+        "phoneNumber",
+        "password"
+      ],
+      "properties": {
+          "phoneNumber":{
+              "type":"string"
+          },
+        
+        "password":{
+            "type":"string",
+            "minlength":"6",
+            "maxlength":"12"
+        },
+        
+        "status":{
+            "type":"string"
+        }
+        
+      }
+  },
+
+  "movieTicket": {
+    "required": [
+    "userId",
+    "movieId",
+    "city",
+    "theaterName",
+    "day",
+    "time",
+    "seat",
+    "totalAmount",
+    "bookingStatus"
+    ],
+    "properties": {
+        "userId":{
+            "type":"string"
+        },
+      
+      "movieId":{
+          "type":"string"
+      },
+      
+      "city":{
+          "type":"string"
+      },
+      "theaterName":{
+        "type":"string"
+    },
+    "day":{
+        "type":"date",
+        "default":"date.now"
+    },
+    "time":{
+        "type":"string"
+    },
+    "seat":[{
+        "type":"string"
+    }],
+    "totalAmount":{
+        "type":"string"
+    },
+    "bookingStatus":{
+        "type":"string"
+    }
+      
+    }
+},
+  "movie": {
+      "required": [
+        "cityId",
+        "theaterId",
+      "movieName",
+      "movieLanguage",
+      "movieType",
+      "movieRating"
+      ],
+      "properties": {
+        "cityId":{
+          "type":"string"
+      },
+      "theaterId":{
+        "type":"string"
+    },
+
+          "movieName":{
+              "type":"string"
+          },
+        
+        "movieLanguage":{
+            "type":"string"
+        },
+        
+        "movieType":{
+            "type":"string"
+        },
+        "movieRating":{
+          "type":"string"
+      }
+        
+      }
+  },
+  "movieCity": {
+    "required": [
+      "cityName"
+    ],
+    "properties": {
+      "cityName":{
+        "type":"string"
+    },
+    "cityLogo":{
+      "type":"string"
+  }
+ }
+},
+
+"theater": {
+  "required": [
+    "cityId",
+    "movieId",
+    "theaterName",
+    "day",
+    "showTime"
+  ],
+  "properties": {
+    "cityId":{
+      "type":"string"
+  },
+  "movieId":{
+    "type":"string"
+},
+"theaterName":{
+  "type":"string"
+},
+"location":{
+  "type": {
+    "type": "String",
+    "enum": ["Point"],
+    "required": true
+  },
+  "coordinates": {
+    "type": ["Number"],
+    "required": true
+  }
+},
+"day":{
+  "type":"String"
+},
+"showTime":[{"type":"String"}]
+}
+}
+  
+          
+          
+  }
+  }
